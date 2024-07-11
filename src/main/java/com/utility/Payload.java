@@ -1,5 +1,8 @@
 package com.utility;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Payload {
 
 	public static String department = "{\r\n" + "    \"id\": 2,\r\n" + "    \"name\": \"ajay\",\r\n"
@@ -36,6 +39,15 @@ public class Payload {
 				+ "       \"summary\": \" country Dropdown not clickable " + Library.getRandomString(10) + " \",\r\n"
 				+ "       \"issuetype\": {\r\n" + "          \"name\": \"Bug\"\r\n" + "       }\r\n" + "   }\r\n"
 				+ "}\r\n" + "";
+	}
+
+	public static Map<String, String> getFormData() {
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("client_id", "692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com");
+		map.put("client_secret", "erZOWM9g3UtwNRj340YYaK_W");
+		map.put("grant_type", "client_credentials");
+		map.put("scope", "trust");
+		return map;
 	}
 
 }
